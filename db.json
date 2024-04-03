@@ -1,0 +1,12 @@
+
+{
+    "users": [
+      { "id": 1, "username": "Gunjan", "password": "Gunjan@28" },
+      { "id": 2, "username": "Prakash", "password": "Prakash#6" },
+      { "id": 3, "username": "John", "password": "John123" },
+      { "id": 4, "username": "Alice", "password": "Alice456" },
+      { "id": 5, "username": "kuku", "password":"kuku123"}
+    ]
+  }
+  
+  
