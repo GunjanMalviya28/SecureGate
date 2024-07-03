@@ -1,38 +1,38 @@
 
-// // import React, { useState } from 'react';
-// // import './App.css';
-// // import LoginPage from './LoginPage';
-// // import Dashboard from './Dashboard';
+import React, { useState } from 'react';
+import './App.css';
+import LoginPage from './LoginPage';
+import Dashboard from './Dashboard';
 
-// // function App() {
-// //   const [isLoggedIn, setIsLoggedIn] = useState(false);
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-// //   const handleLogin = (username, password) => {
+  const handleLogin = (username, password) => {
     
-// //     if (username === 'Gunjan' && password === 'Gunjan@28') {
-// //       setIsLoggedIn(true);
-// //     } else {
-// //       setIsLoggedIn(false);
-// //       alert('Invalid credentials');
-// //     }
-// //   };
+    if (username === 'Gunjan' && password === 'Gunjan@28') {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+      alert('Invalid credentials');
+    }
+  };
 
-// //   const handleLogout = () => {
-// //     setIsLoggedIn(false);
-// //   };
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
 
-// //   return (
-// //     <div className="App">
-// //       {isLoggedIn ? (
-// //         <Dashboard onLogout={handleLogout} />
-// //       ) : (
-// //         <LoginPage onLogin={handleLogin} />
-// //       )}
-// //     </div>
-// //   );
-// // }
+  return (
+    <div className="App">
+      {isLoggedIn ? (
+        <Dashboard onLogout={handleLogout} />
+      ) : (
+        <LoginPage onLogin={handleLogin} />
+      )}
+    </div>
+  );
+}
 
-// // export default App;
+export default App;
 
 
 // import React, { useState, useEffect } from 'react';
@@ -84,50 +84,50 @@
 
 
 
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import LoginPage from './LoginPage';
-import Dashboard from './Dashboard';
+// import React, { useState, useEffect } from 'react';
+// import './App.css';
+// import LoginPage from './LoginPage';
+// import Dashboard from './Dashboard';
 
-function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [users, setUsers] = useState([]);
+// function App() {
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
+//   const [users, setUsers] = useState([]);
   
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(data => setUsers(data))
-      .catch(error => console.error('Error fetching user data:', error));
-  }, []);
+//   useEffect(() => {
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//       .then(response => response.json())
+//       .then(data => setUsers(data))
+//       .catch(error => console.error('Error fetching user data:', error));
+//   }, []);
 
-  const handleLogin = (username, password) => {
-    const user = users.find(user => user.username === username && user.email === password); 
+//   const handleLogin = (username, password) => {
+//     const user = users.find(user => user.username === username && user.email === password); 
 
-    if (user) {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
-      alert('Invalid credentials');
-    }
-  };
+//     if (user) {
+//       setIsLoggedIn(true);
+//     } else {
+//       setIsLoggedIn(false);
+//       alert('Invalid credentials');
+//     }
+//   };
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
+//   const handleLogout = () => {
+//     setIsLoggedIn(false);
+//   };
 
-  return (
-    <div className="App">
-      {isLoggedIn ? (
-        <Dashboard onLogout={handleLogout} />
-      ) : (
-        <LoginPage onLogin={handleLogin} />
-      )}
-    </div>
-  );
-}
+//   return (
+//     <div className="App">
+//       {isLoggedIn ? (
+//         <Dashboard onLogout={handleLogout} />
+//       ) : (
+//         <LoginPage onLogin={handleLogin} />
+//       )}
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 
 
